@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.ourcoursesdbba{
+    transform: rotate(-29.5deg);
+    position: absolute;
+    top: 5%;
+    left:5%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.TestiomnialSwipper .swiper-slide-prev{
+    opacity: 0.5;
+}
+.TestiomnialSwipper .swiper-slide-next{
+    opacity: 0.5;
+}
+.ourcourses-tabs .scrollbar-hide::-webkit-scrollbar{
+    display: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+    font-family: 'Kalam-Regular';
+    src: url(./Assets/Font/Kalam-Regular.ttf);
+}
+@font-face {
+    font-family: 'PlayfairDisplay-Regular';
+    src: url(./Assets/Font/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: 'PlayfairDisplay-Medium';
+    src: url(./Assets/Font/PlayfairDisplay-Medium.ttf);
 }
