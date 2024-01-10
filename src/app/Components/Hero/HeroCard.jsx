@@ -9,6 +9,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Custom from '@/SVG/Custom';
+import CustomHero from '@/SVG/CustomHero';
 
 const HeroCard = () => {
 
@@ -47,11 +49,10 @@ const HeroCard = () => {
 
     return (
         <div className='relative'>
-            <div onClick={nextHandler} className={`lg:-right-10 3xl:-right-36 right-20 -top-20 lg:top-0 absolute`}><svg xmlns="http://www.w3.org/2000/svg" width="62" height="65" viewBox="0 0 62 65" fill="none">
-                <circle cx="37.3888" cy="19.9905" r="11.3066" transform="rotate(-160.453 37.3888 19.9905)" fill="#7077E4" />
-                <circle cx="41.5486" cy="57.4647" r="5.15177" transform="rotate(-160.453 41.5486 57.4647)" fill="#ADBBF4" />
-                <circle cx="5.11221" cy="41.3461" r="2.37922" transform="rotate(-160.453 5.11221 41.3461)" fill="#ADBBF4" />
-            </svg></div>
+            <div onClick={nextHandler}>
+                <Custom className={`2xl:left-[30rem] sm:-top-6 xl:left-[22rem] lg:left-[22rem] md:right-32 right-10 -top-20`} />
+            </div>
+            <CustomHero className={`lg:-right-10 z-0 3xl:-right-36 right-20 -top-20 lg:top-0 absolute`} />
             <Swiper
                 autoplay={{
                     delay: 2500,

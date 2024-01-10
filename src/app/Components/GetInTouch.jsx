@@ -12,8 +12,8 @@ const GetInTouch = () => {
                 <p className='text-xs text-[#666680]'>Have questions, inquiries, or just want to connect? Reach out to us through the contact information below. Our dedicated team is here to assist you and ensure you have the information you need. We look forward to hearing from you!</p></div>
             <div>
                 <div className='grid lg:grid-cols-2 grid-cols-1 place-items-start 2xl:gap-x-0 gap-x-[20px] 3xl:mx-[130px]'>
-                    <div className='border-2 border-r-pink-600 border-r-2 border-slate-200 rounded-lg'>
-                        <form className='flex flex-col p-[20px]'>
+                    <div className='border-2  border-r-2 border-slate-200 rounded-lg'>
+                        <form className='flex flex-col this-is-form p-[20px]'>
                             <div className='my-[30px]'>
                                 <label>Name</label><br />
                                 <input className='border-b-2 xl:w-[25vw] lg:w-[40vw] w-full mt-[30px] border-black' type="text" />

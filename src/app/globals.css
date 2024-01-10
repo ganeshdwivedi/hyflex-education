@@ -35,3 +35,16 @@
     font-family: 'PlayfairDisplay-Medium';
     src: url(./Assets/Font/PlayfairDisplay-Medium.ttf);
 }
+
+.this-is-form{
+    position: relative;
+}
+.this-is-form::after{
+    top: 10%;
+    right: 0;
+    height: 70%;
+    border-right: 3px solid #E74DC6;
+    position: absolute;
+    content: '';
+    
+}
