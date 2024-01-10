@@ -9,8 +9,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import Custom from '@/SVG/Custom';
-import CustomHero from '@/SVG/CustomHero';
+import Custom from '@/SVG/Slider/Custom';
+import CustomHero from '@/SVG/Slider/CustomHero';
+import CustomPRev from '@/SVG/Slider/CustomPRev';
 
 const HeroCard = () => {
 
@@ -26,42 +27,52 @@ const HeroCard = () => {
         {
             imgsrc: 'https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg',
             name: 'Ramesh Gupta'
-        },
-        {
-            imgsrc: 'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704585600&semt=sph',
-            name: 'John Cena'
-        },
-        {
-            imgsrc: 'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704585600&semt=sph',
-            name: 'The Rock'
-        },
-        {
-            imgsrc: 'https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg',
-            name: 'Ritesh Singh'
         }
     ]
 
-    const [swiperRef, setSwiperRef] = useState(null);
+    const redirectToSlide = (index) => {
+        if (swiperRef.current) {
+            swiperRef.current.slideTo(index);
+        }
+    };
+
+    const swiperRef = useRef(null);
+
 
     const nextHandler = () => {
-        swiperRef.slideNext();
+        redirectToSlide(2);
+        console.log("nextClicked")
+    };
+    const PrevHandler = () => {
+        redirectToSlide(0);
+        console.log("prevClicked")
     };
 
     return (
         <div className='relative'>
-            <div onClick={nextHandler}>
-                <Custom className={`2xl:left-[30rem] sm:-top-6 xl:left-[22rem] lg:left-[22rem] md:right-32 right-10 -top-20`} />
+            <div>
+                <Custom className={`2xl:left-[34rem] sm:-top-6 xl:left-[22rem] lg:left-[22rem] md:right-32 right-10 -top-20`} />
             </div>
-            <CustomHero className={`lg:-right-10 z-0 3xl:-right-36 right-20 -top-20 lg:top-0 absolute`} />
+            <div onClick={PrevHandler}>
+                <CustomPRev className={`2xl:left-[27rem] sm:-top-6 xl:left-[22rem] lg:left-[22rem] md:right-32 right-10 `} />
+            </div>
+            <div onClick={nextHandler}>
+                <CustomHero className={`lg:right-52 z-0 3xl:-right-36 right-20 -top-20 lg:bottom-0 absolute`} />
+            </div>
             <Swiper
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
+                pagination={{
+                    clickable: true,
+                }}
                 slidesPerView={1}
                 spaceBetween={50}
                 loop={true}
-                onSwiper={(swiper) => setSwiperRef(swiper)}
+                onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >{Data.map((item) => <SwiperSlide>
