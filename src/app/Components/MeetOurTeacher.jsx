@@ -82,6 +82,12 @@ const MeetOurTeacher = () => {
             }, {
                 breakpoint: 1240,
                 settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                },
+            }, {
+                breakpoint: 1440,
+                settings: {
                     slidesToShow: 5,
                     slidesToScroll: 1,
                 },
