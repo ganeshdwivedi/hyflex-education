@@ -6,7 +6,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className='flex flex-col 3xl:mx-[195px] 3xl:mt-[120px] overflow-hidden mb-5 relative rounded-3xl mx-[30px] xl:mx-[155px] py-10 bg-[#f0f3fd]'>
-            <div className='flex mx-10 flex-col md:pb-5 md:flex-row items-center justify-between'>
+            <div className='flex mx-10 flex-col mb-10 md:flex-row items-center justify-between'>
                 <div>
                     <h3 className='uppercase text-[36px] font-[600] text-[#363679]'>Hyfleex</h3>
                     <p className='text-[#666680] text-[14px]'>Block 3, Bhagyalaxmi Apartment<br />
@@ -26,9 +26,9 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col gap-y-1 md:pt-1 lg:gap-y-0 md:flex-row w-full absolute bottom-0 justify-between px-10 bg-[#ADBBF4]'>
-                <p className='lg:text-[14px] text-[13px]'>WWW.hyfleex.com</p>
-                <p className='lg:text-[14px] text-[13px]'>Designed By: yashwebdesign.com</p>
+            <div className='flex gap-y-1 py-3 lg:gap-y-0 flex-col  sm:flex-row w-full absolute bottom-0 justify-between px-10 bg-[#ADBBF4]'>
+                <p className='lg:text-[14px] text-[#666680] text-[13px]'>WWW.hyfleex.com</p>
+                <p className='lg:text-[14px] text-[#666680] text-[13px]'>Designed By: yashwebdesign.com</p>
             </div>
         </div>
     )

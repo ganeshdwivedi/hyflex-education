@@ -10,8 +10,10 @@ import MeetOurTeacher from './Components/MeetOurTeacher'
 import OurCourses from './Components/OurCourses/OurCourses'
 import Testimonial from './Components/Testimonial'
 
-
 export default function Home() {
+
+
+
   return (
     <>
       <Navbar />

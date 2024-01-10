@@ -1,21 +1,23 @@
 "use client"
 import React from 'react'
-import HeroVideoSVG from '@/SVG/HeroVideoSVG'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Slide } from 'react-awesome-reveal';
 import Eclipsesvg from '../../../SVG/Eclipsesvg';
 import HeroCard from './HeroCard';
+import HeroDashed from './HeroDashed';
+import HeroDesignSVG from '@/SVG/HeroDesignSVG';
 
 const Hero = () => {
     return (
         <div className='flex flex-col 3xl:h-[896px] 3xl:px-[209px] lg:gap-0 gap-10 lg:flex-row lg:items-start justify-between xl:px-[147px]  m-2 bg-[#fdf2fb] px-[22px] py-[100px] lg:pb-[160px] rounded-[25px] relative overflow-hidden '>
             {/* big circle blue design */}
             <Eclipsesvg className={"top-0 -left-36"} />
+            <HeroDesignSVG className={"bottom-20 left-32"} />
 
             {/* Hero Left */}
             <Slide triggerOnce="true">
                 <div className='flex lg:pt-[150px] 3xl:pt-[254px] flex-col items-start'>
-                    <h3 className='3xl:text-[59px] font-[PlayfairDisplay-Medium] xl:text-[50px] text-[36px] leading-tight lg:text-[30px] text-[#181B32] '>Become Fluent in <br className='lg:block hidden' /><span className='text-[#524FD5] border border-[#7077E4] rounded-md p-1 border-dashed'>Foreign Language</span><br /> with Hyfleex</h3>
+                    <h3 className='3xl:text-[59px] font-[PlayfairDisplay-Medium] xl:text-[50px] text-[36px] leading-tight lg:text-[30px] text-[#181B32] '>Become Fluent in <br className='lg:block hidden' /><span className='text-[#524FD5] relative '> <HeroDashed className={"w-[260px] lg:block hidden 3xl:w-[504.46px] 3xl:h-[83px] xl:w-[430px] xl:h-[70px] lg:-left-2 h-[40px]"} />Foreign Language</span><br /> with Hyfleex</h3>
                     <p className='text-[#666680] mt-[18px] text-[16px] font-poppins'>Discover Spanish, German, English, IELTS, Japanese, and more languages <br /> with Hyfleex. Break barriers, build connections—start your multilingual journey!</p>
                     <button className='text-[#524FD5] mt-[32px] font-[500] text-[18px]'>Explore courses <ArrowRightAltIcon /></button>
 

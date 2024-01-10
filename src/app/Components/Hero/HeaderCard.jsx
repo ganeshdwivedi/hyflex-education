@@ -20,11 +20,11 @@ const HeaderCard = () => {
         },
         {
             imgsrc: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg',
-            name: 'Dinesh Phogat'
+            name: 'Dinesh pr'
         },
         {
             imgsrc: 'https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg',
-            name: 'Ramesh Gupta'
+            name: 'Ramesh G'
         },
         {
             imgsrc: 'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704585600&semt=sph',
@@ -72,6 +72,10 @@ const HeaderCard = () => {
                         spaceBetween: 10,
                     },
                     1350: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    1550: {
                         slidesPerView: 3,
                         spaceBetween: 10,
                     },

@@ -19,6 +19,9 @@
 .ourcourses-tabs .scrollbar-hide::-webkit-scrollbar{
     display: none;
 }
+.okay-iam .aria-selected{
+    background-color: antiquewhite;
+}
 
 @font-face {
     font-family: 'Kalam-Regular';

@@ -1,8 +1,10 @@
 "use client"
-import React, { useRef } from 'react'
+import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 const MeetOurTeacher = () => {
 
@@ -93,21 +95,19 @@ const MeetOurTeacher = () => {
     return (
         <div className='mx-[30px] 3xl:mx-[195px] 3xl:py-[120px] py-[100px] xl:mx-[155px]'>
 
-            <div className='flex flex- justify-between items-center'>
+            <div className='flex justify-between items-center'>
                 <div>
                     <p className='text-[#666680] text-sm 3xl:text-[27px] font-[Kalam-Regular]'>Key Persons</p>
                     <h3 className='font-[600] text-[#181B32] text-[21px] lg:text-[33px]'>Meet Our Teachers</h3>
                 </div>
-                <div className='flex flex-row gap-x-5 lg:mr-4'>
-                    <div className='rounded-full hover:shadow-md text-center border-2 p-2 border-slate-100' onClick={() => slider?.current?.slickPrev()}>
+                <div className='grid grid-cols-2 gap-x-5 3xl:gap-x-[30px] place-items-start lg:mr-4'>
+                    <div className='rounded-full hover:shadow-md text-center border-2 p-2 hover:border-[#524FD5] hover:bg-[#524FD5] border-[#E8E8F6]' onClick={() => slider?.current?.slickPrev()}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                             <path d="M15.111 6.43115L7.88995 13.6522L15.111 20.8733" stroke="#E8E8F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <div className='rounded-full hover:shadow-md bg-[#524FD5] p-2 text-white' onClick={() => slider?.current?.slickNext()}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 26 26" fill="none">
-                            <path d="M10.8887 6.43115L18.1098 13.6522L10.8887 20.8733" stroke="#EFF0F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <div className='rounded-full border-2 hover:border-[#524FD5]  border-[#E8E8F6] hover:shadow-md hover:bg-[#524FD5] p-1 text-white' onClick={() => slider?.current?.slickNext()}>
+                        <ChevronRightIcon className='text-[#E8E8F6]' fontSize='large' />
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ const MeetOurTeacher = () => {
                 <Slider ref={slider} {...settings}>{
                     Teachers.map((item, index) =>
                         <div key={index} className='flex 3xl:w-[286px] 3xl:h-[443.793px] flex-col items-center'>
-                            <div className='3xl:w-[286px] xl:h-[160px] 3xl:h-[300px] md:w-[250px] h-[250px] rounded-xl xl:w-[200px] overflow-hidden '>
+                            <div className='3xl:w-[286px] xl:h-[160px] 3xl:h-[300px] md:w-[230px] md:h-[230px] h-[250px] rounded-xl xl:w-[190px] overflow-hidden '>
                                 <img className='w-full h-full scale-90 md:scale-100 object-cover object-top' src={item.imgsrc} alt={`${item.title}'s img`} />
                             </div>
                             <div className='flex md:w-[200px] 3xl:w-[286px] xl:w-[200px] flex-col text-center my-2'>
