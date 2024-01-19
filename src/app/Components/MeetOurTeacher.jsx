@@ -99,7 +99,7 @@ const MeetOurTeacher = () => {
     const slider = React.useRef(null);
 
     return (
-        <div className='mx-[30px] 3xl:mx-[195px] 3xl:py-[120px] py-[100px] xl:mx-[155px]'>
+        <div id="teachers" className='mx-[30px] 3xl:mx-[195px] 3xl:py-[120px] py-[100px] xl:mx-[155px]'>
 
             <div className='flex justify-between items-center'>
                 <div>
