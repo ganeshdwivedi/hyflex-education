@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { Slide } from "react-awesome-reveal";
+import Link from 'next/link'
+
 
 function Navbar() {
     const [toggle, settoggle] = useState(false);
@@ -39,9 +41,11 @@ function Navbar() {
                             <li className={navlinkcss}>
                                 Teachers
                             </li>
+                            <Link href="/#teachers">
                             <li className={`${navlinkcss}`}>
                                 Careers
                             </li>
+                                </Link>
                             <li className={`${navlinkcss}`}>
                                 Contact
                             </li>
